@@ -1,0 +1,25 @@
+
+<div class="contact-details">
+    <div *ngIf="isInfoAvailable()">
+        <table class="contact-details__data">
+            <tbody>
+                <tr>
+                    <td class="contact-details__data-title">Name:</td>
+                    <td class="contact-details__data-value">{{contact.name}}</td>
+                </tr>
+                <tr>
+                    <td class="contact-details__data-title">LastName:</td>
+                    <td class="contact-details__data-value">{{contact.lastname}}</td>
+                </tr>
+                <tr>
+                    <td class="contact-details__data-title">Phone:</td>
+                    <td class="contact-details__data-value">{{contact.phone}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="contact-details__empty">
+        <div class="contact-details__empty-message" *ngIf="!isInfoAvailable()" class="right-block">Select contact on the left panel to view details</div>
+    </div>
+</div>
+

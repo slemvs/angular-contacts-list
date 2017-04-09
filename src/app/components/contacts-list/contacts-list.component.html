@@ -1,0 +1,3 @@
+<div class="left-block__list">
+    <cl-contact-item *ngFor="let c of data" [contact]="c" (onItemSelected)="onItemSelected($event)" [selectedContact]="selectedContact"></cl-contact-item>
+</div>

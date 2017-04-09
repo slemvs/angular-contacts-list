@@ -1,0 +1,8 @@
+  <div class="left-block">
+    <cl-search (onTextEntered)="onSearchTextEntered($event)"></cl-search>
+    <cl-list [data]="data | getFilteredData : searchText" (onContactSelected)="selectContact($event)"></cl-list>
+  </div>
+  <div class="right-block">
+    <cl-details [contact]="selectedContact"></cl-details>
+  </div>
+
